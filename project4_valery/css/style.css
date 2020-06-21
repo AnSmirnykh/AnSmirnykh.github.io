@@ -372,7 +372,7 @@ footer {
 
 @media(min-width: 600px) and (max-width:959px) {
     .header {
-        background: url(../img/Photo3.JPG) center no-repeat;
+        background: url(../img/Photo3.jpg) center no-repeat;
         background-size: cover;
     }
     .header-bg {
@@ -427,7 +427,7 @@ footer {
 
 @media(min-width: 320px) and (max-width:599px) {
     .header {
-        background: url(../img/Photo3.JPG) center no-repeat;
+        background: url(../img/Photo3.jpg) center no-repeat;
         background-size: cover;
     }
     .header-bg {
