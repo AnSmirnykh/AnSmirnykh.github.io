@@ -462,7 +462,7 @@ footer {
         flex-direction: column;
         margin-right: 0px;
         position: absolute;
-        background-color: #0000008c;
+        background-color: rgba(0, 0, 0, 0.781);
         width: 100%;
     }
     .nav-item {
