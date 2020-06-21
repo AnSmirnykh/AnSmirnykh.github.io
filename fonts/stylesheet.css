@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'NeonDerthaw';
+    src: url('NeonDerthaw.eot');
+    src: url('NeonDerthaw.eot?#iefix') format('embedded-opentype'),
+        url('NeonDerthaw.woff2') format('woff2'),
+        url('NeonDerthaw.woff') format('woff'),
+        url('NeonDerthaw.svg#NeonDerthaw') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+

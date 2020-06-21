@@ -1,0 +1,754 @@
+//Переменные
+$cl0: #000;
+$cl1: #151515;
+$cl2: #eee;
+$cl3: rgba(252, 255, 0, 1);
+$cl4: rgb(219, 252, 72);
+$cl_hat: rgba(0, 0, 0, 0.425);
+$cl_hat_text: rgba(238, 238, 238, 0.336);
+
+
+//Базовые настройки
+body {
+    background-color: $cl1;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+//ОСНОВЫНЕ СТИЛИ ЭЛЕМЕНТОВ
+
+//Элемент ВВЕРХ 
+.RiseUp {
+    display: block;
+    position: fixed;
+    z-index: 50;
+    right: 50px;
+    bottom: 50px;
+}
+.rise {
+    height: 15vh;
+    opacity: 0.5;
+}
+
+//Заголовки
+.section-header {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    h1 {
+        color: $cl0;
+        padding-top: 60px;
+        font-weight: 700;
+    }
+    h2 {
+        margin-top: -40px;
+        color: $cl3;
+        font-weight: 700;
+    }
+}
+
+
+//МЕНЮ
+.hat {
+    font-size: 20px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: $cl2;
+    &-nav {
+        &-text {
+            color: $cl_hat_text;
+        }
+        &-text:hover {
+            color: $cl3;
+            text-decoration: none;
+        }
+    }
+}
+.logo {
+    width: 7vh;
+}
+
+
+//ГЛАВНЫЙ ЭКРАН
+.main {
+    position: relative;
+    &-photo {
+        position: absolute;
+        background: url(../img/my_photo.png);
+        display: block;
+        z-index: 0;
+        width: 520px;
+        height: 605px;
+        right: 0;
+        top: 45px;
+    }
+    /* &-img {
+        position: absolute;
+        width: 80vh;
+        right: 0;
+        top: 45px;
+    } */
+}
+.main-photo:hover {
+    background: url(../img/my_photo2.png);
+}
+
+.header {
+    color: $cl2;
+    &-img {
+        position: absolute;
+        height: 104vh;
+    }
+    &-text {
+        padding-top: 180px;
+        h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 5px;
+        }
+        h2 {
+            line-height: 100px;
+            font-size: 30px;
+            letter-spacing: 10px;
+            span {
+                color: $cl3;
+            }
+        }
+    }
+    &-icon {
+        display: block;
+        margin-top: 250px;
+        padding-left: 0;
+        img {
+            margin-top: 20px;
+        }
+    }
+}
+.icon {
+    transition-duration: 0.5s;
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.btn-first {
+    margin-top: -50px;
+    margin-bottom: 130px;
+    transition-duration: 0.2s;
+    &:hover {
+        transform: translateY(-10px);
+        color: $cl0;
+    }
+}
+
+.my-btn {
+    color: $cl2;
+    width: 100%;
+    height: 10px;
+    font-size: 25px;
+    padding: 7px 50px;
+    transition-duration: 0.5s;
+    transition-property: all;
+    &-border {
+        border: 2px solid $cl3;
+        /*Свойства для создания градиента
+        border-image: linear-gradient(rgb(255, 14, 223) , rgb(11, 170, 255));
+        -moz-border-image: -moz-linear-gradient(rgb(255, 14, 223) , rgb(11, 170, 255));
+        -webkit-border-image: -webkit-linear-gradient(rgb(255, 14, 223) , rgb(11, 170, 255));
+        border-image-slice: 1; */
+
+    }
+    &:hover {
+        color: $cl0;
+        text-decoration: none;
+        background-color: $cl2;
+        cursor: pointer;
+        box-shadow: 0px 0px 21px 0px $cl4;
+    }
+}
+
+
+//БЛОК ОБО МНЕ
+.about {
+    position: relative;
+    &-bg {
+        z-index: 9;
+        margin-top: -10px;
+        background: url(../img/Bg3.png) center no-repeat;
+        background-size: cover;
+    }
+}
+.info {
+    &-p {
+        font-size: 25px;
+        margin-top: 140px;
+        span {
+            color: $cl3;
+            font-weight: 700;
+        }
+    }
+    &-photo {
+        margin-top: 100px;
+        width: 70vh;
+        margin-bottom: 150px;
+    }
+}
+
+//ПОРТФОЛИО
+.portfolio {
+    position: relative;
+    z-index: 0;
+}
+
+//КОНТАКТЫ
+.contacts {
+    position: relative;
+    z-index: 8;
+    &-bg {
+        margin-top: -10px;
+        background: url(../img/Bg3.png) center no-repeat;
+        background-size: cover;
+    }
+}
+.contacts-box-h3 {
+    margin-top: 80px;
+    font-weight: 700;
+    color: $cl0;
+    font-size: 35px;
+}
+.contacts-box-p {
+    margin-top: 80px;
+    color: $cl0;
+    font-size: 25px;
+}
+.soc {
+    margin-bottom: 40px;
+}
+.contacts-img {
+    width: 10vh;
+    transition-duration: 0.5s;
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+.contacts-img-3 {
+    margin-top: 10px;
+}
+.icons-cont {
+    margin-top: 80px;
+    padding-bottom: 200px;
+}
+
+//ПОДВАЛ
+.footer {
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    color: $cl2;
+    transform: translateY(-45%);
+    &-bg {
+        margin-top: -20px;
+    }
+}
+.logo-2 {
+    display: block;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+.footer-text {
+    padding-top: 45px;
+}
+
+
+/* МЕДИАЗАПРОСЫ */
+@media (max-width: 1100px) {
+    .header-text {
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+    }
+    .info {
+        &-p {
+            font-size: 24px;
+            margin-top: 80px;
+        }
+        &-photo {
+            margin-top: 100px;
+            width: 40vh;
+            margin-bottom: 250px;
+        }
+    }
+}
+
+@media(max-width: 999px) {
+    .main {
+        &-photo {
+            background: url(../img/my_photo3.png);
+            width: 520px;
+            height: 605px;
+            right: 0;
+            top: 45px;
+        }
+    }
+    .header {
+        &-icon {
+            margin-top: 250px;
+        }
+        &-text {
+            margin-top: 70px;
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width: 977px) {
+    .logo {
+        margin-left: -30px;
+        width: 5vh;
+    }
+    .info {
+        &-p {
+            margin-top: 80px;
+            margin-bottom: 150px;
+            margin-left: 50px;
+        }
+        &-photo {
+            width: 40vh;
+            margin-bottom: 0px;
+            left: 0;
+        }
+    }
+    .contacts-box-h3 {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    .contacts-box-p {
+        margin-left: 40px;
+    }
+    .footer {
+        transform: translateY(-45%);
+        &-bg {
+            margin-top: 10px;
+        }
+    }
+    .logo-2 {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+    .footer-text {
+        padding-top: 45px;
+    }
+}
+
+@media(max-width: 950px) {
+    .logo {
+        margin-left: -30px;
+        width: 5vh;
+    }
+    .info {
+        &-p {
+            margin-top: 80px;
+            margin-bottom: 150px;
+            margin-left: 50px;
+        }
+        &-photo {
+            width: 40vh;
+            margin-bottom: 0px;
+            left: 0;
+        }
+    }
+    .contacts-box-h3 {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    .contacts-box-p {
+        margin-left: 40px;
+    }
+    .footer {
+        transform: translateY(-45%);
+        &-bg {
+            margin-top: 10px;
+        }
+    }
+    .logo-2 {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+    .footer-text {
+        padding-top: 45px;
+    }
+}
+
+@media(max-width: 900px) {
+    .logo {
+        margin-left: -30px;
+        width: 5vh;
+    }
+    .info {
+        &-p {
+            margin-top: 0;
+            margin-bottom: 150px;
+        }
+        &-photo {
+            width: 30vh;
+            margin-bottom: 0px;
+        }
+    }
+    .contacts-box-h3 {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    .contacts-box-p {
+        margin-left: 40px;
+    }
+    .footer {
+        transform: translateY(-45%);
+        &-bg {
+            margin-top: 10px;
+        }
+    }
+    .logo-2 {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+    .footer-text {
+        padding-top: 45px;
+    }
+}
+
+@media(max-width: 769px) {
+    .section-header-md {
+        margin-bottom: 50px;
+    }
+    .info {
+        &-p {
+            margin-top: 50px;
+            margin-bottom: 180px;
+            font-size: 25px;
+        }
+        &-photo {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .contacts-box-h3 {
+        display: inline-block;
+        text-align: center;
+        font-size: 30px;
+    }
+    .contacts-box-p {
+        margin-left: 5px;
+        font-size: 25px;
+    }
+    .soc {
+        margin-bottom: 35px;
+    }
+    .contacts-img {
+        width: 7vh;
+    }
+    .footer-box {
+        font-size: 25px;
+        margin-top: 100px;
+    }
+    .footer-text {
+        padding-top: 45px;
+    }
+}
+
+@media(max-width: 700px) {
+    .section-header-md {
+        margin-bottom: 50px;
+    }
+    .info {
+        &-p {
+            margin-top: 50px;
+            margin-bottom: 180px;
+            font-size: 25px;
+        }
+        &-photo {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .contacts-box-h3 {
+        font-size: 30px;
+    }
+    .contacts-box-p {
+        margin-left: 5px;
+        font-size: 25px;
+    }
+    .soc {
+        margin-bottom: 35px;
+    }
+    .contacts-img {
+        width: 7vh;
+    }
+    .footer-box {
+        font-size: 25px;
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 576px) {
+    .hat {
+        font-size: 20px;
+        line-height: 70px;
+        text-transform: uppercase;
+        color: $cl2;
+        &-nav {
+            &-text {
+                color: $cl_hat_text;
+            }
+            &-text:hover {
+                color: $cl3;
+                text-decoration: none;
+            }
+        }
+    }
+    .logo {
+        margin-left: -10px;
+        width: 5vh;
+    }
+    .main-photo {
+        position: relative;
+        background: url(../img/my_photo.png);
+        display: block;
+        width: 50vh;
+        left: 0;
+        margin: 0 auto;
+    }
+    .header {
+        &-icon {
+            display: inline-block;
+            margin-top: 120px;
+            text-align: center;
+        }
+        &-text {
+            margin-top: -70px;
+            text-align: center;
+            h1 {
+                font-size: 45px;
+            }
+            h2 {
+                line-height: 50px;
+                font-size: 30px;
+                letter-spacing: 10px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .icon-xs {
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+    .btn-first {
+        display: inline-block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .info {
+        &-p {
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+        &-photo {
+            display: none;
+        }
+    }
+    .logo-2 {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 415px) {
+    .logo {
+        display: block;
+        margin-left: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .hat-nav-text {
+        display: inline;
+        text-align: center;
+        margin-left: 35%;
+        font-size: 25px;
+    }
+    .main-photo {
+        background: url(../img/my_photo_phone.png) center no-repeat;
+        margin-top: -120px;
+    }
+    .header {
+        &-icon {
+            margin-top: -50px;
+        }
+        &-text {
+            margin-top: -120px;
+            margin-bottom: -70px;
+        }
+    }
+    .icon-xs {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .info {
+        &-p {
+            margin-top: 20px;
+            margin-bottom: 180px;
+            font-size: 25px;
+        }
+    }
+    .contacts-box-h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .contacts-box-p {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 0;
+    }
+    .icons-cont {
+        display: inline-block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .contacts-img {
+        width: 10vh;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 375px) {
+    .logo {
+        display: block;
+        margin-left: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .hat-nav-text {
+        display: inline;
+        text-align: center;
+        margin-left: 35%;
+        font-size: 25px;
+    }
+    .main-photo {
+        background: url(../img/my_photo_phone.png) center no-repeat;
+        margin-top: -120px;
+    }
+    .header {
+        &-icon {
+            margin-top: -50px;
+        }
+        &-text {
+            margin-top: -120px;
+            margin-bottom: -70px;
+        }
+    }
+    .icon-xs {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .info {
+        &-p {
+            margin-top: 20px;
+            margin-bottom: 180px;
+            font-size: 25px;
+        }
+    }
+    .contacts-box-h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .contacts-box-p {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 0;
+    }
+    .icons-cont {
+        display: inline-block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .contacts-img {
+        width: 10vh;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 325px) {
+    .logo {
+        display: block;
+        margin-left: 50%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .hat-nav-text {
+        display: inline;
+        text-align: center;
+        margin-left: 35%;
+        font-size: 25px;
+    }
+    .main-photo {
+        background: url(../img/my_photo_phone.png) center no-repeat;
+        margin-top: -120px;
+    }
+    .main-photo:hover {
+        background: url(../img/my_photo_phone.png) center no-repeat;
+    }
+    .header {
+        &-icon {
+            margin-top: -50px;
+        }
+        &-text {
+            margin-top: -120px;
+            margin-bottom: -70px;
+        }
+    }
+    .icon-xs {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .info {
+        &-p {
+            margin-top: 20px;
+            margin-bottom: 180px;
+            font-size: 25px;
+        }
+    }
+    .contacts-box-h3 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .contacts-box-p {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 0;
+    }
+    .icons-cont {
+        display: inline-block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .contacts-img {
+        width: 10vh;
+        margin-bottom: 30px;
+    }
+}
