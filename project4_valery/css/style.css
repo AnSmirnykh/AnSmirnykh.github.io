@@ -108,10 +108,10 @@ li {
 .left-content h2 strong {
     color: rgb(255, 0, 179);
     font-weight: 200;
-}
-.left-content p strong {
+} 
+/*.left-content p strong {
     color: rgb(255, 0, 179);
-}
+} */
 .left-content h2 {
     padding-left: 50px;
     margin-bottom: 50px;
@@ -124,6 +124,7 @@ li {
     padding-left: 50px;
     font-size: 23px;
     margin-bottom: 70px;
+    text-align: justify;
 }
 
 /* Three page PORTFOLIO */
