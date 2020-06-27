@@ -568,9 +568,6 @@ footer {
     .portfolio img {
         width: 300px;
     }
-    .advantage-text {
-        text-align: center;
-    }
     .advantage-text-head {
         margin: 0 auto;
         max-width: 300px;
@@ -583,17 +580,20 @@ footer {
         border-bottom: 1px solid rgb(255, 0, 179);
     }
     .advantage-text p {
+        text-align: justify;
         font-weight: 400;
         font-size: 22px;
         padding-top: 20px;
         padding-bottom: 10px;
-        margin-left: 18px;
+        margin-left: 33px;
+        margin-right: 7px;
     }
     .advantage-text ul li {
-        margin-left: -20px;
         text-align: left;
+        margin-left: -3px;
+        /*text-align: left;
         margin-left: 5px;
-        margin-right: 7px;
+        margin-right: 7px;*/
     }
     .advantage-text ul li::before {
         content: '';
